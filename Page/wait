@@ -1,0 +1,87 @@
+import React from "react";
+import {Image, StyleSheet, Text, TextInput, View} from "react-native";
+
+export default function Login() {
+    return (
+    <View style={styles.page}>
+        <Image
+            source={require('../assets/LogoYbadges.png')}
+            width={125}
+            height={166}
+            alt='logo'
+            style={styles.logo}
+        />
+        <View style={styles.menulogin}>
+            <Text style={styles.textunselect}>INSCRIVEZ-VOUS</Text>
+            <Text style={styles.textselect}>SE CONNECTER</Text>
+        </View>
+        <View style={styles.formlogin}>
+            <View style={styles.inputType}>
+                <Text style={styles.label}>Email</Text>
+                <TextInput style={styles.input}/>
+            </View>
+
+            <TextInput style={styles.input} placeholder="Mot de passe" placeholderTextColor="#fff"/>
+        </View>
+
+    </View>
+    )
+}
+const styles = StyleSheet.create({
+    page: {
+        width: '100%',
+        alignItems:'center',
+    },
+    logo: {
+        width: 250,
+        height: 200,
+        marginTop: 73,
+        marginHorizontal:'auto'
+    },
+    menulogin: {
+        flexDirection:'row',
+        marginTop: 70,
+        justifyContent:'space-around',
+        width:'100%',
+
+    },
+    textselect: {
+        color:'#fff',
+        fontSize:20,
+        fontWeight:'bold',
+        textDecorationLine: "underline",
+    },
+    textunselect: {
+        color:'#fff',
+        fontSize:20,
+    },
+    label: {
+        position:'absolute',
+        color:'#fff',
+        fontSize:16,
+        paddingTop:10,
+        textAlign:'left',
+        width:'80%'
+    },
+    input: {
+        color:'#fff',
+        height: 40,
+        borderWidth: 1,
+        width:'80%',
+        borderColor:'#131313',
+
+    },
+    inputType:{
+        width:'80%',
+        borderBottomColor: '#fff',
+        borderBottomWidth:  1
+    },
+
+    formlogin: {
+        width:'100%',
+        alignItems:'center',
+        marginTop: 70,
+        justifyContent:'center',
+    },
+
+});
